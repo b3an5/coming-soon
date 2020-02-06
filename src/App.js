@@ -1,21 +1,25 @@
-import React, { useState } from "react";
-import logo from "./loading2.gif";
-import "./App.scss";
-import ReactModal from "react-modal";
+import React, { useState } from "react"
+import logo from "./loading2.gif"
+import "./App.scss"
+import ReactModal from "react-modal"
 
-import MailIcon from "./mailIcon";
-import PhoneIcon from "./PhoneIcon";
+import MailIcon from "./mailIcon"
+import PhoneIcon from "./PhoneIcon"
 
 function App() {
-  const [contactModal, setContactModal] = useState(false);
+  const [contactModal, setContactModal] = useState(false)
 
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Veloci Trackers</h1>
-        <p>is Coming Soon...</p>
+        <h1>VELOCITRACKERS</h1>
+        <p>...coming soon!</p>
         <img src={logo} className="App-logo" alt="logo" />
-        <button class="btn draw-border" onClick={() => setContactModal(true)}>
+        <button
+          className="btn draw-border"
+          onClick={() => setContactModal(true)}
+          style={{ cursor: "pointer", width: 120 }}
+        >
           Contact Us
         </button>
         <ReactModal
@@ -41,13 +45,13 @@ function App() {
           }}
           closeTimeoutMS={200}
         >
-          <h1 class="names">Chris Meyer</h1>
+          <h1 class="names">General Inquiries</h1>
           <div class="icon-container">
             <div class="icon">
-              <a href={"mailto:chris@velocitrackers.com"}>
+              <a href={"mailto:contact@velocitrackers.com"}>
                 <MailIcon />
               </a>
-              <p>chris@velocitrackers.com</p>
+              <p>contact@velocitrackers.com</p>
             </div>
             <div class="icon">
               <a href={"tel:17194661016"}>
@@ -56,13 +60,13 @@ function App() {
               <p>(719) 466-1016</p>
             </div>
           </div>
-          <h1 class="names">Theo Bean</h1>
+          <h1 class="names">Sales</h1>
           <div class="icon-container">
             <div class="icon">
-              <a href={"mailto:theo@velocitrackers.com"}>
+              <a href={"mailto:sales@velocitrackers.com"}>
                 <MailIcon />
               </a>
-              <p>theo@velocitrackers.com</p>
+              <p>sales@velocitrackers.com</p>
             </div>
             <div class="icon">
               <a href={"tel:13378527322"}>
@@ -73,8 +77,11 @@ function App() {
           </div>
           <div>
             <button
+              style={{
+                cursor: "pointer"
+              }}
               onClick={() => {
-                setContactModal(false);
+                setContactModal(false)
               }}
               class="btn draw-border"
             >
@@ -84,7 +91,7 @@ function App() {
         </ReactModal>
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
